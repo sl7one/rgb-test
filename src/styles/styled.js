@@ -4,15 +4,27 @@ import bg from '../assets/bg.png';
 export const AppBox = styled.div`
   background-image: url(${bg});
   background-size: cover;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (min-width: 1082px) {
+    height: 100vh;
+    padding-bottom: unset;
+  }
 `;
 
 export const Container = styled.div`
-  max-width: 1083px;
+  max-width: 360px;
+  padding: 0 16px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1082px) {
+    max-width: 1083px;
+    padding: unset;
+  }
 `;
 
 export const HeaderBox = styled.div`
@@ -24,8 +36,11 @@ export const HeaderBox = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 182px;
-  height: 56px;
+  width: 101px;
+
+  @media screen and (min-width: 1082px) {
+    width: 182px;
+  }
 `;
 
 export const InfoBox = styled.div`
@@ -35,40 +50,82 @@ export const InfoBox = styled.div`
 
 export const InfoBoxText = styled.p`
   font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
+  font-size: 11px;
+  line-height: 0.72;
+
   color: ${({ theme }) => theme.colors.mainWhite};
   background-color: ${({ theme }) => theme.colors.headerInfo};
-  padding: 13px 23px;
+  /* padding: 13px 23px; */
+  width: 88px;
+  height: 24px;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+
+  &:nth-child(2) {
+    width: 84px;
+  }
+
+  @media screen and (min-width: 1082px) {
+    width: 141px;
+    height: 40px;
+
+    &:nth-child(2) {
+      width: 141px;
+      height: 40px;
+    }
+
+    font-size: 14px;
+    line-height: 1;
+  }
 `;
 
 export const HeroBox = styled.section`
   display: flex;
-  gap: 135px;
-  margin-top: 116px;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1082px) {
+    flex-direction: row;
+    gap: 135px;
+    margin-top: 116px;
+  }
 `;
 
 export const LeftPart = styled.div`
-  width: 474px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1082px) {
+    display: block;
+    width: 474px;
+  }
 `;
 
 export const HeaderText = styled.h1`
   font-weight: 800;
-  font-size: 77px;
-  line-height: 1.22;
+  font-size: 52.7273px;
+  line-height: 1.23;
+
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.mainAccent};
+
+  @media screen and (min-width: 1082px) {
+    font-size: 77px;
+    line-height: 1.22;
+  }
 `;
 
 export const WebinarText = styled.p`
   display: inline-block;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 2;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+
   color: ${({ theme }) => theme.colors.mainWhite};
   padding: 4px 13px;
   background-color: ${({ theme }) => theme.colors.secondaryAccent};
@@ -76,22 +133,35 @@ export const WebinarText = styled.p`
   display: inline-flex;
   align-items: center;
   gap: 6px;
+
+  @media screen and (min-width: 1082px) {
+    font-size: 16px;
+    line-height: 2;
+  }
 `;
 
 export const PostTitleText = styled.p`
   font-weight: 600;
-  font-size: 21.9494px;
-  line-height: 1.18;
+  font-size: 15px;
+  line-height: 1.2;
+
   color: ${({ theme }) => theme.colors.mainWhite};
 
   display: flex;
   align-items: center;
 
+  @media screen and (min-width: 1082px) {
+    font-size: 21.9494px;
+    line-height: 1.18;
+  }
+
   span {
     font-weight: 800;
-    font-size: 23.6391px;
-    line-height: 1.23;
-    padding: 8px 14px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    margin-right: 20px;
     text-transform: uppercase;
     position: relative;
     top: 2px;
@@ -101,13 +171,24 @@ export const PostTitleText = styled.p`
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 1082px) {
+      font-size: 23.6391px;
+      line-height: 1.23;
+      padding: 8px 14px;
+    }
+
     &::after {
       content: '';
       display: block;
       position: absolute;
 
-      width: 106.72px;
-      height: 38.69px;
+      width: 77.81px;
+      height: 32.12px;
+
+      @media screen and (min-width: 1082px) {
+        width: 106.72px;
+        height: 38.69px;
+      }
 
       background-color: ${({ theme }) => theme.colors.mainAccent};
       border-radius: 5px;
@@ -119,37 +200,66 @@ export const PostTitleText = styled.p`
 
 export const HeroText = styled.p`
   margin-top: 20.46px;
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.mainWhite};
+  text-align: center;
+
+  @media screen and (min-width: 1082px) {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  font-size: 14px;
+  line-height: 148%;
+
   span {
     display: inline;
-    font-weight: 500;
+    font-weight: 600;
+
+    &:nth-of-type(2) {
+      display: inline-block;
+      color: ${({ theme }) => theme.colors.secondaryAccent};
+
+      @media screen and (min-width: 1082px) {
+        display: inline;
+        color: inherit;
+      }
+    }
 
     span {
-      font-weight: 700;
-      font-size: 17.332px;
-      line-height: 1.5;
-      padding: 1px 6px;
+      @media screen and (min-width: 1082px) {
+        font-weight: 700;
+        font-size: 17.332px;
+        line-height: 1.5;
+        padding: 1px 6px;
 
-      background: #4252d1;
-      border-radius: 3px;
-      background-color: ${({ theme }) => theme.colors.secondaryAccent};
+        background: #4252d1;
+        border-radius: 3px;
+        background-color: ${({ theme }) => theme.colors.secondaryAccent};
+      }
     }
   }
 `;
 
 export const BenefitsList = styled.ul`
-  margin-top: 54.6px;
-  display: grid;
-  flex-direction: column;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column-reverse;
   gap: 16px;
 
-  font-size: 13px;
-  line-height: 1.23;
+  font-size: 12px;
+  line-height: 1.5;
 
   color: ${({ theme }) => theme.colors.mainWhite};
+
+  @media screen and (min-width: 1082px) {
+    margin-top: 54.6px;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 
   li:first-of-type() {
     text-transform: uppercase;
@@ -157,11 +267,22 @@ export const BenefitsList = styled.ul`
 
   li {
     display: grid;
-    grid-template-columns: 56px 1fr;
+    grid-template-columns: 56px 161px;
     gap: 16px;
+
+    @media screen and (min-width: 1082px) {
+      grid-template-columns: 56px 1fr;
+    }
 
     h3 {
       font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+
+      @media screen and (min-width: 1082px) {
+        font-size: 13px;
+        line-height: 1.23;
+      }
     }
 
     span {
@@ -173,10 +294,17 @@ export const BenefitsList = styled.ul`
 export const RightPart = styled.div``;
 
 export const FormBox = styled.form`
-  width: 474px;
-  padding: 50px 60px;
+  margin-top: 20px;
+  width: 328px;
+  padding: 40px 21px;
   background-color: ${({ theme }) => theme.colors.formColor};
   border-radius: 10px;
+
+  @media screen and (min-width: 1082px) {
+    margin-top: unset;
+    width: 474px;
+    padding: 50px 60px;
+  }
 
   display: flex;
   flex-direction: column;
@@ -185,9 +313,14 @@ export const FormBox = styled.form`
 
 export const FormTitle = styled.h2`
   font-weight: 700;
-  font-size: 22px;
-  line-height: 1.18;
+  font-size: 20px;
+  line-height: 1.15;
   text-align: center;
+
+  @media screen and (min-width: 1082px) {
+    font-size: 22px;
+    line-height: 1.18;
+  }
 
   color: ${({ theme }) => theme.colors.mainWhite};
   span {
@@ -196,17 +329,34 @@ export const FormTitle = styled.h2`
 `;
 
 export const FormFields = styled.div`
-  margin-top: 20px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 100%;
+
+  @media screen and (min-width: 1082px) {
+    margin-top: 20px;
+  }
 
   input {
-    width: 248px;
-    padding: 14px 22px;
+    width: 100%;
+    padding: 12px 26.3px;
+    font-size: 12px;
+    line-height: 1.83;
+
     background-color: #272d3d;
     border-radius: 5px;
     color: ${({ theme }) => theme.colors.mainWhite};
+
+    @media screen and (min-width: 1082px) {
+      padding: 14px 22px;
+      font-size: 13px;
+      line-height: 1.95;
+    }
+
+    font-size: 12px;
+    line-height: 22px;
 
     &::placeholder {
       color: #d7d7d7;
@@ -215,20 +365,35 @@ export const FormFields = styled.div`
 
   button {
     font-weight: 700;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.57;
     color: ${({ theme }) => theme.colors.mainWhite};
     padding: 13px;
 
-    background-color: ${({ theme }) => theme.colors.mainAccent};
+    background-color: ${({ theme }) => theme.colors.secondaryAccent};
     border-radius: 5px;
+
+    @media screen and (min-width: 1082px) {
+      font-size: 15px;
+      line-height: 1.6;
+      background-color: ${({ theme }) => theme.colors.mainAccent};
+    }
   }
 `;
 
 export const FormPrivacy = styled.p`
   margin-top: 20px;
+  font-size: 11px;
+  line-height: 1.5;
+
   color: rgba(255, 255, 255, 0.5);
   display: inline-block;
+
+  @media screen and (min-width: 1082px) {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
   span {
     display: block;
     position: relative;
