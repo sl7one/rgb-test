@@ -20,6 +20,7 @@ export const Container = styled.div`
   max-width: 360px;
   padding: 0 16px;
   margin: 0 auto;
+  overflow-x: hidden;
 
   @media screen and (min-width: 1082px) {
     max-width: 1083px;
@@ -89,6 +90,7 @@ export const HeroBox = styled.section`
 
   @media screen and (min-width: 1082px) {
     flex-direction: row;
+    align-items: flex-start;
     gap: 135px;
     margin-top: 116px;
   }
@@ -98,6 +100,7 @@ export const LeftPart = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
 
   @media screen and (min-width: 1082px) {
     display: block;
@@ -291,14 +294,13 @@ export const BenefitsList = styled.ul`
   }
 `;
 
-export const RightPart = styled.div``;
-
 export const FormBox = styled.form`
   margin-top: 20px;
   width: 328px;
   padding: 40px 21px;
   background-color: ${({ theme }) => theme.colors.formColor};
   border-radius: 10px;
+  opacity: 0;
 
   @media screen and (min-width: 1082px) {
     margin-top: unset;
@@ -408,4 +410,9 @@ export const FormPrivacy = styled.p`
       background-color: rgba(255, 255, 255, 0.5);
     }
   }
+`;
+
+export const ErrorMessageText = styled.p`
+  font-weight: 300;
+  color: red;
 `;
