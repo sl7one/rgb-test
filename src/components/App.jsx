@@ -1,8 +1,8 @@
 import 'react-phone-number-input/style.css';
+import { useMediaQuery } from 'react-responsive';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { AppBox, Container, HeroBox } from 'styles/styled';
-import { useMedia } from 'use-media';
 
 import frontEnd from '../assets/front-end developer.png';
 import { Benefits } from './Benefits';
@@ -11,7 +11,7 @@ import { HeroForm } from './HeroForm';
 import { LeftHeroPart } from './LeftHeroPart';
 
 export const App = () => {
-  const isDesktop = useMedia({ minWidth: 1082 });
+  const isDesktop = useMediaQuery({ minWidth: 1082 });
 
   return (
     <AppBox>

@@ -1,3 +1,7 @@
+import { useEffect, useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
+
+import { gsap } from 'gsap';
 import {
   HeaderText,
   HeroText,
@@ -5,15 +9,13 @@ import {
   PostTitleText,
   WebinarText,
 } from 'styles/styled';
-import { Icon } from './Icon';
+
 import { Benefits } from './Benefits';
-import { useMedia } from 'use-media';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { Icon } from './Icon';
 
 export const LeftHeroPart = () => {
   const ref = useRef(null);
-  const isDesktop = useMedia({ minWidth: 1082 });
+  const isDesktop = useMediaQuery({ minWidth: 1082 });
 
   useEffect(() => {
     gsap.fromTo(ref.current, { x: 400 }, { x: 0, opacity: 1, duration: 1.5 });
