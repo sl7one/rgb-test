@@ -9,6 +9,7 @@ import { Benefits } from './Benefits';
 import { Header } from './Header';
 import { HeroForm } from './HeroForm';
 import { LeftHeroPart } from './LeftHeroPart';
+import { AnimatedPics } from './AnimatedPics';
 
 export const App = () => {
   const isDesktop = useMediaQuery({ minWidth: 1082 });
@@ -26,6 +27,7 @@ export const App = () => {
         </main>
       </Container>
       {isDesktop && <img src={frontEnd} alt="front end developer" />}
+      {isDesktop && <AnimatedPics />}
     </AppBox>
   );
 };

@@ -416,3 +416,26 @@ export const ErrorMessageText = styled.p`
   font-weight: 300;
   color: red;
 `;
+
+export const AnimatedPicsBox = styled.div`
+  position: absolute;
+  right: 9%;
+  top: 0;
+  transform: translateY(50%);
+
+  #html {
+    transform: translate(60%, 40%);
+  }
+  #css {
+    transform: translate(-60%, 25%);
+  }
+  #js {
+    transform: translate(70%, 25%);
+  }
+  #pic {
+    transform: translate(-60%, 15%);
+  }
+  #vs {
+    transform: translate(30%, 25%);
+  }
+`;
