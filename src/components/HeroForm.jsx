@@ -77,8 +77,6 @@ export const HeroForm = () => {
 
     if (!isValidForm) return toast.error('Заполните все необходимые поля!');
 
-    // designer.web.studio.rgb@gmail.com
-
     setIsLoading(true);
 
     emailjs
@@ -86,8 +84,8 @@ export const HeroForm = () => {
         'service_rgm99vw',
         'template_4p4h5mq',
         {
-          fromName: 'Viacheslav Kiriliyk',
-          to: 'sl7one@gmail.com',
+          fromName: 'Test Email',
+          to: 'designer.web.studio.rgb@gmail.com',
           name,
           email,
           phone,
