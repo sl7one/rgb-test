@@ -376,11 +376,14 @@ export const FormFields = styled.div`
     background-color: ${({ theme }) => theme.colors.secondaryAccent};
     border-radius: 5px;
 
+    width: 222.25px;
+    margin: 0 auto;
+
     @media screen and (min-width: 1082px) {
       font-size: 15px;
       line-height: 1.6;
-      width: 222.25px;
       background-color: ${({ theme }) => theme.colors.mainAccent};
+      width: 100%;
     }
   }
 `;
