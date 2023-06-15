@@ -4,8 +4,7 @@ import bg from '../assets/bg.png';
 export const AppBox = styled.div`
   background-image: url(${bg});
   background-size: cover;
-  height: 100%;
-  padding-bottom: 30px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -304,8 +303,10 @@ export const FormBox = styled.form`
 
   @media screen and (min-width: 1082px) {
     margin-top: unset;
-    width: 474px;
+    width: 366px;
     padding: 50px 60px;
+    position: relative;
+    z-index: 1;
   }
 
   display: flex;
@@ -378,6 +379,7 @@ export const FormFields = styled.div`
     @media screen and (min-width: 1082px) {
       font-size: 15px;
       line-height: 1.6;
+      width: 222.25px;
       background-color: ${({ theme }) => theme.colors.mainAccent};
     }
   }
@@ -422,6 +424,7 @@ export const AnimatedPicsBox = styled.div`
   right: 9%;
   top: 0;
   transform: translateY(50%);
+  z-index: 0;
 
   #html {
     transform: translate(60%, 40%);

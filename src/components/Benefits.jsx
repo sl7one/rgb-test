@@ -1,8 +1,10 @@
 import { BenefitsList } from 'styles/styled';
 import gift from '../assets/gift.png';
 import kiril from '../assets/kiril kasatkin.png';
+import { useMediaQuery } from 'react-responsive';
 
 export const Benefits = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1082 });
   return (
     <BenefitsList>
       <li>
@@ -21,7 +23,11 @@ export const Benefits = () => {
         <img src={gift} alt="gift" width={37.8} height={37.8} />
         <div>
           <h3>Бонус за регистрацию</h3>
-          <p>PDF-файл "5 преимуществ профессии фронтенд разработчика"</p>
+          {isDesktop ? (
+            <p>PDF-файл "5 преимуществ профессии фронтенд разработчика"</p>
+          ) : (
+            <p>PDF-файл "5 преимуществ профессии веб-дизайнера" </p>
+          )}
         </div>
       </li>
     </BenefitsList>
