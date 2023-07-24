@@ -4,7 +4,7 @@ import bg from '../assets/bg.png';
 export const AppBox = styled.div`
   background-image: url(${bg});
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,7 +19,7 @@ export const Container = styled.div`
   max-width: 360px;
   padding: 0 16px;
   margin: 0 auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   @media screen and (min-width: 1082px) {
     max-width: 1083px;
