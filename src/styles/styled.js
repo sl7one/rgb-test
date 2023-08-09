@@ -86,12 +86,13 @@ export const HeroBox = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+padding-bottom: 20px;
 
   @media screen and (min-width: 1082px) {
     flex-direction: row;
     align-items: flex-start;
     gap: 135px;
-    margin-top: 116px;
+    margin-top: 30px;
   }
 `;
 
